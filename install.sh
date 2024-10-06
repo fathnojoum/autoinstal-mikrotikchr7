@@ -76,7 +76,7 @@ INTERFACE_GATEWAY=$(ip route show | grep default | awk '{print $3}')
 
 echo "/ip address add address=${INTERFACE_IP} interface=[/interface ethernet find where name=ether1]
 /ip route add gateway=${INTERFACE_GATEWAY}
-" > /mnt/autorun.scr
+" > /mnt/rw/autorun.scr
 
 {
     umount /mnt > /dev/null 2>&1
